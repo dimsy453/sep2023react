@@ -1,5 +1,5 @@
-const  CharacterSimson= ({Character}) => {
-    const { name, surname, age, info, img} = Character
+const  CharacterSimson= ({CharacterSimson}) => {
+    const { name, surname, age, info, img} = CharacterSimson
     return (
         <div>
             <h1>{name}</h1>

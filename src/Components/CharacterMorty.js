@@ -1,5 +1,5 @@
-const  CharacterMorty= ({Character2}) => {
-    const { name,status,species,gender,img} = Character2
+const  CharacterMorty= ({CharacterMorty}) => {
+    const { name,status,species,gender,img} = CharacterMorty
     return (
         <div>
             <h1>{name}</h1>
