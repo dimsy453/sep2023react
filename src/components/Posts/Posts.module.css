@@ -1,0 +1,9 @@
+.Posts{
+    display: flex;
+}
+.Style{
+    width: 48%;
+    height: 35vh;
+    display: inline-block;
+    margin: 0 0 25px 25px;;
+}
