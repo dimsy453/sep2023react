@@ -9,6 +9,7 @@ const Post = ({post, getDetailsPost}) => {
             <div> id:{id} </div>
             <div> title:{title}</div>
             <button onClick={()=>getDetailsPost (post)}>Detalis</button>
+
         </div>
     );
 };

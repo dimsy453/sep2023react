@@ -20,9 +20,10 @@ const Posts = () => {
     }
 
     return (
-        <div className={style.Style}>
-            <div className={style.Posts}>
+        <div className={style.Posts}>
+            <div >
                 {posts.map(post => <Post key={post.id} post={post} getDetailsPost = {getDetailsPost}/>)}
+
             </div>
             <hr/>
 
