@@ -4,9 +4,9 @@ import {spaceBaseURL} from "../constants/urls";
 
 
 
-// const axiosSpaceServise = axios.create({baseURL: spaceBaseURL})
-//
-//
-// export {
-//     axiosSpaceServise
-// }
+const axiosSpaceService = axios.create({baseURL: spaceBaseURL})
+
+
+export {
+    axiosSpaceService
+}

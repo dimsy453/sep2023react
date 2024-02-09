@@ -1,4 +1,4 @@
-const Post = ({post, getDetailsPost}) => {
+const Post = ({post, setPostDetails}) => {
     const {id, title} = post
     
 
@@ -8,7 +8,7 @@ const Post = ({post, getDetailsPost}) => {
         <div>
             <div> id:{id} </div>
             <div> title:{title}</div>
-            <button onClick={()=>getDetailsPost (post)}>Detalis</button>
+            <button onClick={()=>setPostDetails (post)}>Detalis</button>
         </div>
     );
 };

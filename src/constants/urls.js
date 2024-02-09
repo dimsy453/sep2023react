@@ -1,17 +1,17 @@
-const baseURL = `https://jsonplaceholder.typicode.com`
+const postBaseURL = `https://jsonplaceholder.typicode.com`
+const spaceBaseURL = `https://api.spacexdata.com/v3`
 
 const posts = `/posts`
-
+const launches = `/launches`
 
 const urls = {
-    posts: {
-        base: posts,
-        byId: (id) => `/${posts}/${id}`
-    },
+    posts,
+    launches
 }
 
 
 export {
-    baseURL,
+    postBaseURL,
+    spaceBaseURL,
     urls
 }

@@ -1,7 +1,8 @@
 import axios from "axios";
-import {baseURL} from "../constants/urls";
+import {postBaseURL} from "../constants/urls";
 
-const axiosPostService = axios.create({ baseURL })
+const axiosPostService = axios.create({baseURL: postBaseURL})
+
 
 export {
     axiosPostService

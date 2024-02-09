@@ -1,6 +1,6 @@
 import {useEffect, useState} from "react";
 import {Post} from "../Post/Post";
-import {axiosService} from "../../services/axiosService";
+import {axiosPostService} from "../../services/axiosPostService";
 import {urls} from "../../constants/urls";
 import {postsService} from "../../services/postsService";
 import {PostDetails} from "../PostDetails/PostDetails";
@@ -14,15 +14,10 @@ const Posts = () => {
         postsService.getAll().then(({data}) => setPosts(data))
     }, []);
 
-    const getDetailsPost = (post) => {
-        setPostDetails(post)
-
-    }
-
     return (
-        <div className={style.Style}>
-            <div className={style.Posts}>
-                {posts.map(post => <Post key={post.id} post={post} getDetailsPost = {getDetailsPost}/>)}
+        <div className={style.Posts}>
+            <div >
+                {posts.map(post => <Post key={post.id} post={post} setPostDetails = {setPostDetails}/>)}
             </div>
             <hr/>
 
