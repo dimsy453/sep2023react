@@ -1,8 +1,10 @@
 import {useEffect, useState} from "react";
 import {commentsServices} from "../../services/commentsServices";
+import {CommentsForm} from "./CommentsForm";
+import {Comments} from "./Comments";
 
 
-const commentsContainer = () => {
+const CommentsContainer = () => {
     const [ comments, setComments] = useState([])
 
     useEffect(() => {
@@ -12,12 +14,12 @@ const commentsContainer = () => {
     return (
         <div>
             <div>
-                {/*<UserForm setUsers={setUsers}/>*/}
-                {/*<hr/>*/}
-                {/*<Users users={users}/>*/}
+                < CommentsForm setComments={setComments}/>
+                <hr/>
+                < Comments comments={comments}/>
             </div>
         </div>
     );
 };
 
-export {commentsContainer}
+export {CommentsContainer}

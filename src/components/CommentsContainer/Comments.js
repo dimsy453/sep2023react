@@ -1,10 +1,13 @@
-const comments = ({comments}) => {
+import {Comment} from "./Comment";
+
+
+const Comments = ({comments}) => {
 
     return (
         <div>
-            comments
+            {comments.map(comment =><Comment key={comment.id} comment={comment}/>)}
         </div>
     );
 };
 
-export {comments}
+export {Comments}
