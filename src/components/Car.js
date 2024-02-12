@@ -5,8 +5,8 @@ const Car = ({car, setCarForUpdate, setTrigger}) => {
     const {id, brand, price, year} = car;
 
     const deleteCar = async () => {
-        await carService.delete(id)
-        setTrigger = () => (prev => !prev)
+        await carService.deleteById(id)
+        setTrigger(prev => !prev)
     }
 
     return (
