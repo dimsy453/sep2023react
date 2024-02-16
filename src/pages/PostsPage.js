@@ -1,17 +1,12 @@
+import {Posts} from "../components/postsContainer/Posts";
 
 const PostsPage = () => {
-    const [post, setPost] = useState(null)
-    const {state: {postId}} = useLocation();
-
-    useEffect(() => {
-        postService.getById(postId).then(({data}) => setPost(data))
-    }, [postId]);
 
     return (
         <div>
-            {post && <Post post={post}/>}
+            <Posts/>
         </div>
     );
 };
 
-export {PostsPage};e}
+export {PostsPage}
