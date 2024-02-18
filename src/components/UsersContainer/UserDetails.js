@@ -1,3 +1,4 @@
+
 import {useNavigate} from "react-router-dom";
 
 const UserDetails = ({userDetails}) => {
@@ -28,8 +29,11 @@ const UserDetails = ({userDetails}) => {
                 </div>
                 <button onClick={()=> navigate(`posts`)}> post of current user </button>
             </div>
+
         </div>
     );
 };
 
-export {UserDetails}
+export {
+    UserDetails
+}
