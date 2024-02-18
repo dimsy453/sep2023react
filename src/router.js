@@ -1,33 +1,40 @@
 import {createBrowserRouter, Navigate} from "react-router-dom";
-import {ErrorPage} from "./pages/ErrorPage";
+
 import {MainLayouts} from "./layouts/MainLayouts";
-import {AlbumsPage} from "./pages/AlbumsPage";
-import {TodosPage} from "./pages/TodosPage";
-import {CommentsPage} from "./pages/CommentsPage";
+import {UsersPage} from "./pages/UsersPage";
+import {UsersDetailsPage} from "./pages/UsersDetailsPage";
+import {ErrorPage} from "./pages/ErrorPage";
 import {PostsPage} from "./pages/PostsPage";
+import {PostsDetailsPage} from "./pages/PostsDetailsPage";
 
 
 
-const router = createBrowserRouter([
+const router  = createBrowserRouter ([
     {
-        path:``, element:<MainLayouts/>,errorElement:<ErrorPage/>,children:[
-            {index:true, element:<Navigate to={`albums`}/>},
+        path:``, element: <MainLayouts/>, errorElement:<ErrorPage/>, children:[
             {
-                path:`albums`, element:<AlbumsPage/>
+                index: true, element: <Navigate to={`users`}/>
             },
             {
-                path:`todos`, element:<TodosPage/>
+                path:`users`, element:<UsersPage/>
             },
             {
-                path:`comments`, element:<CommentsPage/>,children:[
+                path:`users/:id`, element:<UsersDetailsPage/>, children:[
                     {
-                        path:`posts`, element:<PostsPage/>
+                        path:`posts`, element:<PostsPage/>,
                     }
                 ]
+            },
+            {
+                path:`posts/:id`, element:<PostsDetailsPage/>, children:[
+                    // {
+                    //     path:`comments`, element:<PostDetails/>
+                    // }
+                ]
             }
+
         ]
     }
-
 ])
 
 export {
