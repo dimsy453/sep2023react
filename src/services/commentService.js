@@ -2,9 +2,10 @@ import {apiService} from "./apiService";
 import {urls} from "../contants/urls";
 
 const commentService = {
-    getAll:() => apiService.get(urls.comments),
+
+    getByPostId:(postId)=> apiService(urls.comments.base, {params: {postId}})
 }
 
 export {
-    commentService
+commentService
 }
