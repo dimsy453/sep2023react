@@ -1,7 +1,7 @@
 import {useParams} from "react-router-dom";
 import {useEffect, useState} from "react";
 import {characterService} from "../../services";
-import {Character} from "./character";
+import {Character} from "./Character";
 
 const Characters = () => {
     const [characters, setCharacters] = useState([])
@@ -14,7 +14,9 @@ const Characters = () => {
         <div>
             {characters.map(character =><Character key={character.id} character={character}/>)}
         </div>
+
     );
+
 };
 
 export {Characters}
