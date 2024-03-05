@@ -1,13 +1,13 @@
 import {configureStore} from "@reduxjs/toolkit";
-import {counterReducer} from "./slices/counterSlice";
-import {counter2Reducer} from "./slices/counterr2Slice";
+
+import {charactersReducer} from "./slices";
+
 
 const store = configureStore({
     reducer:{
-        counter1: counterReducer,
-        counter2: counter2Reducer
+        characters: charactersReducer
     }
-});
+})
 
 export {
     store
