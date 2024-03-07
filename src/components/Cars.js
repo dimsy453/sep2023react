@@ -1,7 +1,7 @@
 import {useEffect} from "react";
 import {useDispatch, useSelector} from "react-redux";
 
-import {carService} from "../services";
+
 import {carActions} from "../store";
 import {Car} from "./Car";
 
@@ -12,7 +12,8 @@ const Cars = () => {
     const dispatch = useDispatch()
 
     useEffect(() => {
-        carService.getAll().then(({data})=> dispatch(carActions.setAllCars(data)))
+        // carService.getAll().then(({data})=> dispatch(carActions.setAllCars(data)))
+        dispatch(carActions.getAll())
     },[dispatch, trigger])
 
     return (
